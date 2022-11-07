@@ -1,0 +1,42 @@
+$color1: green;
+$color2: red;
+$color3: blue;
+@use "./functions.scss" as f;
+
+
+
+body .container {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: stretch;
+    border: solid f.toRem(1px) $color2;
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: $color3;
+        color: $color1;
+    }
+    @mixin articles-section ($border-color: $color1, $font-size:16px, $color_odd: $color3, $color_even:$color2){ 
+        font-size: f.toRem($font-size);
+        display: flex;
+        margin: 1rem;
+        article {
+            flex: 1;
+            padding: 1rem;
+            border: solid f.toRem(1) $border-color;
+            &:nth-child(odd) {
+                color: $color_odd;
+            }
+            &:nth-child(even) {
+                color: $color_even;
+            }
+        }
+    };
+    .articles {
+        @include articles-section();
+    }
+    .footer {
+        @include articles-section($color3, 24px, $color1);
+    }
+}
