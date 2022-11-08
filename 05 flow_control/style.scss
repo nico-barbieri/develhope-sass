@@ -1,0 +1,90 @@
+$color1: green;
+$color2: red;
+$color3: blue;
+@use "./functions.scss" as f;
+@use "sass:color";
+
+%text {
+    text-align: center;
+    color: $color1;
+    font-family: Georgia;
+    margin: 1rem;
+}
+
+@mixin articles-section ($border-color: $color1, $font-size:16px, $color_odd: $color3, $color_even:$color2){ 
+    font-size: f.toRem($font-size);
+    display: flex;
+    article {
+        flex: 1;
+        padding: 1rem;
+        border: solid f.toRem(1) $border-color;
+        &:nth-child(odd) {
+            color: $color_odd;
+        }
+        &:nth-child(even) {
+            color: $color_even;
+        }
+    }
+};
+
+
+body .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid f.toRem(1px) $color2;
+    padding: 1rem;
+    gap: 1rem;
+    h1 {
+        @extend %text;
+        text-decoration: underline;
+        text-decoration-color: $color3;
+    }
+    h2 {
+        @extend %text;
+        border: solid f.toRem(1) red;
+        padding: 1rem;
+        width: fit-content;
+    }
+    .articles {
+        @include articles-section();
+    }
+    .numbers {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        div {
+            flex: 1;
+            height: f.toRem(45px);
+            max-width: f.toRem(45px);
+            border: solid f.toRem(1) red;
+            
+            $steps: 20;
+
+            @for $i from 1 to $steps {
+                &:nth-child(#{$i}) {
+                    background-color: mix(black, white, percentage(calc($i / ($steps - 1))));
+                    color: mix(white, black, percentage(calc($i / ($steps - 1))));
+                    @if $i == 10 {
+                        background-color: $color3;
+                        color: $color2;
+                    }
+                }
+            }
+
+            $font-sizes: 1rem, 2rem, 3rem;
+
+            @each $size in $font-sizes {
+                &.fs-#{$size} {
+                    font-size: $size;
+                }
+            }
+        }
+    }
+
+    .footer {
+        @include articles-section($color3, 24px, $color1);
+    }
+}
+
