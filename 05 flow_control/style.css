@@ -54,78 +54,76 @@ body .container .numbers div:nth-child(1) {
   color: #0d0d0d;
 }
 body .container .numbers div:nth-child(2) {
-  background-color: #e4e4e4;
-  color: #1b1b1b;
+  background-color: #e6e6e6;
+  color: #1a1a1a;
 }
 body .container .numbers div:nth-child(3) {
-  background-color: #d7d7d7;
-  color: #282828;
+  background-color: #d9d9d9;
+  color: #262626;
 }
 body .container .numbers div:nth-child(4) {
-  background-color: #c9c9c9;
-  color: #363636;
+  background-color: #cccccc;
+  color: #333333;
 }
 body .container .numbers div:nth-child(5) {
-  background-color: #bcbcbc;
-  color: #434343;
+  background-color: #bfbfbf;
+  color: #404040;
 }
 body .container .numbers div:nth-child(6) {
-  background-color: #aeaeae;
-  color: #515151;
+  background-color: #b3b3b3;
+  color: #4d4d4d;
 }
 body .container .numbers div:nth-child(7) {
-  background-color: #a1a1a1;
-  color: #5e5e5e;
+  background-color: #a6a6a6;
+  color: #595959;
 }
 body .container .numbers div:nth-child(8) {
-  background-color: #949494;
-  color: #6b6b6b;
+  background-color: #999999;
+  color: #666666;
 }
 body .container .numbers div:nth-child(9) {
-  background-color: #868686;
-  color: #797979;
+  background-color: #8c8c8c;
+  color: #737373;
 }
 body .container .numbers div:nth-child(10) {
-  background-color: #797979;
-  color: #868686;
   background-color: blue;
   color: red;
 }
 body .container .numbers div:nth-child(11) {
-  background-color: #6b6b6b;
-  color: #949494;
+  background-color: #737373;
+  color: #8c8c8c;
 }
 body .container .numbers div:nth-child(12) {
-  background-color: #5e5e5e;
-  color: #a1a1a1;
+  background-color: #666666;
+  color: #999999;
 }
 body .container .numbers div:nth-child(13) {
-  background-color: #515151;
-  color: #aeaeae;
+  background-color: #595959;
+  color: #a6a6a6;
 }
 body .container .numbers div:nth-child(14) {
-  background-color: #434343;
-  color: #bcbcbc;
+  background-color: #4d4d4d;
+  color: #b3b3b3;
 }
 body .container .numbers div:nth-child(15) {
-  background-color: #363636;
-  color: #c9c9c9;
+  background-color: #404040;
+  color: #bfbfbf;
 }
 body .container .numbers div:nth-child(16) {
-  background-color: #282828;
-  color: #d7d7d7;
+  background-color: #333333;
+  color: #cccccc;
 }
 body .container .numbers div:nth-child(17) {
-  background-color: #1b1b1b;
-  color: #e4e4e4;
+  background-color: #262626;
+  color: #d9d9d9;
 }
 body .container .numbers div:nth-child(18) {
-  background-color: #0d0d0d;
-  color: #f2f2f2;
+  background-color: #1a1a1a;
+  color: #e6e6e6;
 }
 body .container .numbers div:nth-child(19) {
-  background-color: black;
-  color: white;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
 }
 body .container .numbers div.fs-1rem {
   font-size: 1rem;

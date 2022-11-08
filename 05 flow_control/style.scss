@@ -64,11 +64,17 @@ body .container {
 
             @for $i from 1 to $steps {
                 &:nth-child(#{$i}) {
-                    background-color: mix(black, white, percentage(calc($i / ($steps - 1))));
-                    color: mix(white, black, percentage(calc($i / ($steps - 1))));
                     @if $i == 10 {
                         background-color: $color3;
                         color: $color2;
+                    } @else {
+                    $percentage: $i*5%;
+                    //Svolgimento con "mix"
+                    //background-color: mix(black, white, percentage(calc($i / ($steps - 1))));
+                    //color: mix(white, black, percentage(calc($i / ($steps - 1))));
+
+                    background-color: darken($color: white, $amount: $percentage);
+                    color: lighten($color: black, $amount: $percentage);
                     }
                 }
             }
